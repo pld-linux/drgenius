@@ -1,0 +1,50 @@
+--- drgenius-0.5.10/drgenius.desktop~	Wed Jul 14 09:18:25 2004
++++ drgenius-0.5.10/drgenius.desktop	Wed Jul 14 09:21:16 2004
+@@ -1,30 +1,32 @@
+ [Desktop Entry]
+ Name=Dr.Genius
+-Name[pt_BR]=Dr.Genius
+ Name[da]=Dr. Genius
+ Name[de]=Dr. Genius
+ Name[ga]=Dr. Genius
+ Name[gl]=Dr. Genius
+ Name[lt]=Dr. Genius
+ Name[no]=Dr. Genius
+-Name[ru]=‰œÀ‘œ“ Genius
+-Name[sv]=Dr. Genuis
+-Name[uk]=‰œÀ‘œ“ Genius
+ Name[pl]=Dr Genius
++Name[pt_BR]=Dr.Genius
++Name[ru]=–î–æ–∫—Ç–æ—Ä Genius
++Name[sv]=Dr. Genuis
++Name[uk]=–î–æ–∫—Ç–æ—Ä Genius
+ Comment=Dr.Genius Math Tool
+-Comment[pt_BR]=Ferramenta Matem·tica Dr.Genius
+-Comment[da]=Dr. Genius: matematikvÊrkt¯j
+-Comment[da]=Dr. Genius: Mathematikwerkzeug
++Comment[da]=Dr. Genius: matematikv√¶rkt√∏j
++Comment[de]=Dr. Genius: Mathematikwerkzeug
+ Comment[ga]=Dr. Genius: Uirlis Mathematice
+-Comment[gl]=Ferramenta matem·tica Dr. Genius
+-Comment[lt]=Dr.Genius: matematikos ·rankis
+-Comment[no]=Dr. Genius: Matematikkverkt¯y
+-Comment[ru]=Ì¡‘≈Õ¡‘…ﬁ≈”À¡— –“œ«“¡ÕÕ¡ ƒœÀ‘œ“ Genius
+-Comment[uk]=“œ«“¡Õ¡ Õ¡‘…Õ¡‘…ﬁŒ…» œ¬ﬁ…”Ã≈Œÿ
+-Comment[pl]=NarzÍdzie matematyczne Dr Genius
++Comment[gl]=Ferramenta matem√°tica Dr. Genius
++Comment[lt]=Dr.Genius: matematikos ƒØrankis
++Comment[no]=Dr. Genius: Matematikkverkt√∏y
++Comment[pl]=Narzƒôdzie matematyczne Dr Genius
++Comment[pt_BR]=Ferramenta Matem√°tica Dr.Genius
++Comment[ru]=–ú–∞—Ç–µ–º–∞—Ç–∏—á–µ—Å–∫–∞—è –ø—Ä–æ–≥—Ä–∞–º–º–∞ –¥–æ–∫—Ç–æ—Ä Genius
+ Comment[sv]=Dr. Genius Matematikverktyg
++Comment[uk]=–ü—Ä–æ–≥—Ä–∞–º–∞ –º–∞—Ç–∏–º–∞—Ç–∏—á–Ω–∏—Ö –æ–±—á–∏—Å–ª–µ–Ω—å
+ Exec=drgenius
+ Icon=gnome-drgenius.png
+-Terminal=0
++Terminal=false
+ Type=Application
+-Categories=Math;
++Categories=GTK;GNOME;Education;Science;Math;
++Encoding=UTF-8
++# vi: encoding=utf-8
