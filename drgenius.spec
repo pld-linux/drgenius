@@ -2,7 +2,7 @@ Summary:	General tool for mathematics
 Summary(pl):	Rozbudowane narzêdzie matematyczne
 Name:		drgenius
 Version:	0.5.10
-Release:	7
+Release:	8
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.5z.com/pub/genius/%{name}-%{version}.tar.gz
@@ -57,9 +57,6 @@ precyzji, liczby ca³kowite, zespolone oraz macierze.
 echo > exemples/macro/Makefile.am
 # force regeneration, included versions have broken cpp directives
 rm -f gobobjs/*.[ch]*
-
-echo 'Categories=Math;' >> drgenius.desktop
-echo 'Categories=Math;' >> genius/gnome-genius.desktop
 
 %build
 rm -f acinclude.m4
