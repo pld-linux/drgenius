@@ -69,8 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	Utilitiesdir=%{_applnkdir}/Utilities
 
-gzip -9nf AUTHORS NEWS README TODO
-
 %find_lang %{name} --with-gnome --all-name
 
 %clean
@@ -78,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %dir %{_libdir}/genius
 %attr(755,root,root) %{_libdir}/genius/*
