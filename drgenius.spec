@@ -50,7 +50,7 @@ precyzji, liczby ca³kowite, zespolone oraz macierze.
 %patch1 -p1
 
 %build
-rm missing acinclude.m4
+rm -f missing acinclude.m4
 libtoolize --copy --force
 gettextize --copy --force
 aclocal -I macros
