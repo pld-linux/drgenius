@@ -1,0 +1,19 @@
+diff -urN drgenius-0.5.10.org/Makefile.am drgenius-0.5.10/Makefile.am
+--- drgenius-0.5.10.org/Makefile.am	Sun Feb  4 11:46:33 2001
++++ drgenius-0.5.10/Makefile.am	Sun Feb  4 11:47:29 2001
+@@ -2,12 +2,10 @@
+ gladedir = $(datadir)/drgenius/glade
+ SUBDIRS = macros po intl gobobjs drgeo genius lib  exemples icons glade 
+ 
+-CFLAGS += @GNOME_SUPPORT@ -DLIBRARY_DIR=\""$(datadir)/genius/"\" \
+-	-DDRGENIUS_GLADEDIR=\""$(gladedir)"\"
+-CXXFLAGS += @GNOME_SUPPORT@ -DLIBRARY_DIR=\""$(datadir)/genius/"\" \
+-		-DDRGENIUS_GLADEDIR=\""$(gladedir)"\"
+-
+ INCLUDES = \
++	@GNOME_SUPPORT@ \
++	-DLIBRARY_DIR=\""$(datadir)/genius/"\" \
++	-DDRGENIUS_GLADEDIR=\""$(gladedir)"\" \
+ 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
+ 	-DLOCALEDIR=\"$(datadir)/locale\" \
+ 	-I$(includedir) \
