@@ -13,6 +13,7 @@ URL:		http://ofset.sourceforge.net/drgenius/index.html
 BuildRequires:	ORBit-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	gettext-devel
@@ -49,6 +50,7 @@ precyzji, liczby ca³kowite, zespolone oraz macierze.
 %patch0 -p1
 
 %build
+libtoolize --copy --force
 gettextize --copy --force
 aclocal -I macros
 autoconf
