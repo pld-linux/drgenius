@@ -1,0 +1,10 @@
+--- drgenius-0.5.10/gobobjs/drgenius-mdi-child.gob.orig	Thu Oct 26 10:29:20 2000
++++ drgenius-0.5.10/gobobjs/drgenius-mdi-child.gob	Fri Apr  2 16:29:27 2004
+@@ -15,7 +15,6 @@
+ #include "config.h"
+ 
+ #include "drgenius-mdi-child.h"
+-#include "drgenius-mdi-child-private.h"
+ %}
+ 
+ class DrGenius:MDI:Child from Gnome:MDI:Generic:Child {
