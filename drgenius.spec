@@ -6,6 +6,7 @@ Release:	5
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.5z.com/pub/genius/%{name}-%{version}.tar.gz
+# Source0-md5:	17139421686934f86ed6e90e8f658532
 Patch0:		%{name}-make.patch
 Patch1:		%{name}-am_fix.patch
 URL:		http://ofset.sourceforge.net/drgenius/index.html
