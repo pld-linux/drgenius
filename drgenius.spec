@@ -1,5 +1,5 @@
-Summary:	General tool for mathematics.
-Summary(pl):	Rozbudowane narzêdzie matematyczne.
+Summary:	General tool for mathematics
+Summary(pl):	Rozbudowane narzêdzie matematyczne
 Name:		drgenius
 Version:	0.5.10
 Release:	1
@@ -10,18 +10,20 @@ Group(pl):	X11/Aplikacje
 Source0:	http://ftp.5z.com/pub/genius/%{name}-%{version}.tar.gz
 Patch0:		%{name}-make.patch
 URL:		http://ofset.sourceforge.net/drgenius/index.html
-BuildRequires:	libstdc++-devel
+BuildRequires:	ORBit-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	flex
+BuildRequires:	gettext-devel
 BuildRequires:	glib-devel >= 1.2.0
+BuildRequires:	gmp-devel
+BuildRequires:	gnome-libs-devel
 BuildRequires:	gob >= 0.93.4
+BuildRequires:	libstdc++-devel
+BuildRequires:	libxml-devel
 BuildRequires:	ncurses-devel >= 5.0
 BuildRequires:	readline-devel >= 4.1
-BuildRequires:	gettext-devel
-BuildRequires:	libxml-devel
-BuildRequires:	ORBit-devel
-BuildRequires:	gnome-libs-devel
-BuildRequires:	gmp-devel
 Obsoletes:	genius
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
