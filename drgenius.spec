@@ -9,25 +9,26 @@ Source0:	http://ftp.5z.com/pub/genius/%{name}-%{version}.tar.gz
 # Source0-md5:	17139421686934f86ed6e90e8f658532
 Patch0:		%{name}-make.patch
 Patch1:		%{name}-am_fix.patch
+Patch2:		%{name}-gob.patch
+Patch3:		%{name}-c++.patch
 URL:		http://ofset.sourceforge.net/drgenius/index.html
 BuildRequires:	ORBit-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	gettext-devel
 BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	gmp-devel >= 3.1.1
 BuildRequires:	gnome-libs-devel
-BuildRequires:	gob >= 0.93.4
-BuildRequires:	libglade-devel
+BuildRequires:	gob >= 1.0.6
+BuildRequires:	libglade-gnome-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool
 BuildRequires:	libxml-devel
 BuildRequires:	readline-devel >= 4.2
 Obsoletes:	genius
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Dr. Genius is a general tool for mathematics, including a mathematical
@@ -47,6 +48,13 @@ precyzji, liczby ca³kowite, zespolone oraz macierze.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
+%patch3 -p1
+
+# only one, broken line here
+echo > exemples/macro/Makefile.am
+# force regeneration, included versions have broken cpp directives
+rm -f gobobjs/*.[ch]*
 
 echo 'Categories=Math;' >> drgenius.desktop
 echo 'Categories=Math;' >> genius/gnome-genius.desktop
