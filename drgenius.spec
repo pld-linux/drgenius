@@ -52,7 +52,7 @@ precyzji, liczby ca³kowite, zespolone oraz macierze.
 %build
 rm -f missing acinclude.m4
 %{__libtoolize}
-gettextize --copy --force
+%{__gettextize}
 aclocal -I macros
 %{__autoconf}
 %{__automake}
