@@ -2,7 +2,7 @@ Summary:	General tool for mathematics
 Summary(pl):	Rozbudowane narzêdzie matematyczne
 Name:		drgenius
 Version:	0.5.10
-Release:	8
+Release:	9
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.5z.com/pub/genius/%{name}-%{version}.tar.gz
@@ -12,6 +12,7 @@ Patch1:		%{name}-am_fix.patch
 Patch2:		%{name}-gob.patch
 Patch3:		%{name}-c++.patch
 Patch4:		%{name}-desktop.patch
+Patch5:		%{name}-locale_names.patch
 URL:		http://ofset.sourceforge.net/drgenius/index.html
 BuildRequires:	ORBit-devel
 BuildRequires:	autoconf
@@ -52,6 +53,9 @@ precyzji, liczby ca³kowite, zespolone oraz macierze.
 %patch2 -p1
 %patch3 -p1
 %patch4 -p1
+%patch5 -p1
+
+mv po/{no,nb}.po
 
 # only one, broken line here
 echo > exemples/macro/Makefile.am
