@@ -23,8 +23,7 @@ BuildRequires:	gnome-libs-devel
 BuildRequires:	gob >= 0.93.4
 BuildRequires:	libstdc++-devel
 BuildRequires:	libxml-devel
-BuildRequires:	ncurses-devel >= 5.0
-BuildRequires:	readline-devel >= 4.1
+BuildRequires:	readline-devel >= 4.2
 Obsoletes:	genius
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
