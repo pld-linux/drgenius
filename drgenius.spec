@@ -2,7 +2,7 @@ Summary:	General tool for mathematics
 Summary(pl):	Rozbudowane narzêdzie matematyczne
 Name:		drgenius
 Version:	0.5.10
-Release:	5
+Release:	6
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.5z.com/pub/genius/%{name}-%{version}.tar.gz
@@ -21,10 +21,10 @@ BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	gmp-devel >= 3.1.1
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gob >= 0.93.4
+BuildRequires:	libglade-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libxml-devel
 BuildRequires:	readline-devel >= 4.2
-BuildRequires:	libglade-devel
 Obsoletes:	genius
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -48,8 +48,11 @@ precyzji, liczby ca³kowite, zespolone oraz macierze.
 %patch0 -p1
 %patch1 -p1
 
+echo 'Categories=Math;' >> drgenius.desktop
+echo 'Categories=Math;' >> genius/gnome-genius.desktop
+
 %build
-rm -f missing acinclude.m4
+rm -f acinclude.m4
 %{__libtoolize}
 %{__gettextize}
 %{__aclocal} -I macros
@@ -66,7 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	Utilitiesdir=%{_applnkdir}/Utilities
+	Utilitiesdir=%{_desktopdir}
 
 %find_lang %{name} --with-gnome --all-name
 
@@ -83,4 +86,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/drgenius
 %{_datadir}/genius
 %{_pixmapsdir}/*
-%{_applnkdir}/Utilities/*
+%{_desktopdir}/*.desktop
