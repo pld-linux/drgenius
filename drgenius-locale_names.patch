@@ -1,0 +1,11 @@
+--- drgenius-0.5.10/configure.in~	Fri Jul 23 06:53:08 2004
++++ drgenius-0.5.10/configure.in	Fri Jul 23 06:53:08 2004
+@@ -131,7 +131,7 @@
+ dnl **********************************************************************
+ dnl * 	INTERNATIONALIZATION SUPPORT					 *
+ dnl **********************************************************************
+-ALL_LINGUAS="ca cs da de el en_GB es fr ga gl hu it ja ko no pl pt ru sl sv uk pt_BR"
++ALL_LINGUAS="ca cs da de el en_GB es fr ga gl hu it ja ko nb pl pt ru sl sv uk pt_BR"
+ LINGUAS=$ALL_LINGUAS
+ AM_GNU_GETTEXT
+ AC_LINK_FILES($nls_cv_header_libgt, $nls_cv_header_intl)
