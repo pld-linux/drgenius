@@ -18,7 +18,7 @@ BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	gettext-devel
 BuildRequires:	glib-devel >= 1.2.0
-BuildRequires:	gmp-devel
+BuildRequires:	gmp-devel >= 3.1.1
 BuildRequires:	gnome-libs-devel
 BuildRequires:	gob >= 0.93.4
 BuildRequires:	libstdc++-devel
