@@ -111,6 +111,6 @@
 -Terminal=0
 +Terminal=false
  Type=Application
-+Categories=GTK;GNOME;Education;Science;
++Categories=GTK;GNOME;Utility;Calculator;
 +Encoding=UTF-8
 +# vi: encoding=utf-8
