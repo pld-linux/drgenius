@@ -1,0 +1,77 @@
+--- ./gobobjs/Makefile.am.org	Sun Oct  7 16:28:14 2001
++++ ./gobobjs/Makefile.am	Sun Oct  7 16:32:54 2001
+@@ -29,7 +29,8 @@
+ 	geledit-mdi-child-private.h	\
+ 	drgeo-mdi-child-private.h		
+ 
+-base_libgobobjs_a_SOURCES = \
++libgobobjs_a_SOURCES = \
++	$(GOB_SRCLIST)  		\
+ 	drgenius-mdi-child.gob		\
+ 	geledit-mdi-child.gob		\
+ 	console-mdi-child.gob		\
+@@ -38,13 +39,10 @@
+ 
+ 
+ 
+-libgobobjs_a_SOURCES = \
+-	$(GOB_SRCLIST)	\
+-	$(base_libgobobjs_a_SOURCES)
+ 
+ BUILT_SOURCES = $(GOB_SRCLIST)
+ 
+-CLEANFILES += *~ core $(BUILT_SOURCES)
++CLEANFILES = *~ core $(BUILT_SOURCES)
+ 
+ %.c %.h %-private.h: %.gob
+ 	@GOB@ $<
+--- ./drgeo/Makefile.am.org	Sun Oct  7 16:26:13 2001
++++ ./drgeo/Makefile.am	Sun Oct  7 16:27:18 2001
+@@ -1,6 +1,6 @@
+ gladedir = $(datadir)/drgenius/glade
+ 
+-YFLAGS += -d -t
++YFLAGS = -d -t
+ CFLAGS += @GNOME_SUPPORT@ -DLIBRARY_DIR=\""$(datadir)/drgeo/"\" \
+ 	-DDRGENIUS_GLADEDIR=\""$(gladedir)"\"
+ override CXXFLAGS += @GNOME_SUPPORT@ -DLIBRARY_DIR=\""$(datadir)/drgeo/"\" \
+@@ -58,7 +58,7 @@
+ 	drgeo_locus.h drgeo_locus.cc				\
+ 	drgeo_command.h drgeo_command.cc
+ 
+-CLEANFILES += $(BUILT_SOURCES)
++CLEANFILES = $(BUILT_SOURCES)
+ 
+ EXTRA_DIST = DevelopersFAQ TODO README msgDrGeoGUI msgDrGeniusGUI
+ 
+--- ./genius/Makefile.am.org	Sun Oct  7 16:27:31 2001
++++ ./genius/Makefile.am	Sun Oct  7 16:27:52 2001
+@@ -7,7 +7,7 @@
+ plugin_includedir = $(includedir)/genius
+ 
+ #YACCFLAGS += -d -t
+-YFLAGS += -d -t
++YFLAGS = -d -t
+ CFLAGS += @GNOME_SUPPORT@ -DLIBRARY_DIR=\""$(datadir)/genius/"\" \
+ 	-Wno-uninitialized
+ 
+@@ -215,7 +215,7 @@
+ 
+ BUILT_SOURCES = parse.h parse.c lexer.c
+ 
+-CLEANFILES += $(BUILT_SOURCES)
++CLEANFILES = $(BUILT_SOURCES)
+ 
+ EXTRA_DIST = geniustest.pl geniustests.txt gnome-genius.desktop test.plugin.in #lib.gel
+ 
+--- ./Makefile.am.org	Sun Oct  7 16:25:34 2001
++++ ./Makefile.am	Sun Oct  7 16:26:00 2001
+@@ -56,7 +56,7 @@
+ 	drgenius.spec.in readline-4.0.patch drgenius.desktop		\
+ 	$(appicon_DATA)
+ 
+-CLEANFILES += *~ core
++CLEANFILES = *~ core
+ 
+ appicondir = $(datadir)/pixmaps
+ appicon_DATA = gnome-drgenius.png gnome-drgenius-geo.png 		\
