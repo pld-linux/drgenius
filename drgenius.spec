@@ -2,7 +2,7 @@ Summary:	General tool for mathematics
 Summary(pl):	Rozbudowane narzêdzie matematyczne
 Name:		drgenius
 Version:	0.5.10
-Release:	11
+Release:	12
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.5z.com/pub/genius/%{name}-%{version}.tar.gz
