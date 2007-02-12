@@ -1,5 +1,5 @@
 Summary:	General tool for mathematics
-Summary(pl.UTF-8):   Rozbudowane narzędzie matematyczne
+Summary(pl.UTF-8):	Rozbudowane narzędzie matematyczne
 Name:		drgenius
 Version:	0.5.10
 Release:	12
