@@ -20,7 +20,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	flex
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib-devel >= 1.2.0
 BuildRequires:	gmp-devel >= 3.1.1
 BuildRequires:	gnome-libs-devel
